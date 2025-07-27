@@ -1,0 +1,28 @@
+[project]
+name = "lightning-image-classifier"
+version = "0.1.0"
+description = "An image classifier using PyTorch Lightning."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy",
+  "pandas",
+  "xxhash",
+  "matplotlib",
+  "ipython",
+  "torch>=2.7",
+  "torchvision",
+  "torchmetrics",
+  "tensorboard",
+  "pytorch-lightning",
+]
+
+[tool.uv.sources]
+torch = {index = "pytorch"}
+torchvision = {index = "pytorch"}
+torchmetrics = {index = "pytorch"}
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
